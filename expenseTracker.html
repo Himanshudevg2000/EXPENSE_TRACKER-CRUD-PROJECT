@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> EXPENSE TRACKER</h1>
+    </header>
+
+    <section class="container">
+        <form onsubmit="saveToCloudStorage(event)">
+        <h1>ADD DETAILS</h1>
+        
+        <div>
+            <label for="expense">Enter expense amount</label>
+            <input type="text" name="expenseamount" id="expense">
+        </div>
+        <div>
+            <label for="desscription">Enter description</label>
+            <input type="text" name="Chdescription" id="description">
+        </div>
+        <div>
+            <label for="category">Choose a category: </label>
+            <select id="category" class="ct" name="Chcategory">
+                <option value="movies">MOVIES</option>
+                <option value="food">Food</option>
+                <option value="Rent">CAB</option>
+                <option value="clothes">CLOTHES</option>
+                <option value="others">OTHERS</option>
+            </select>
+        </div>
+        <input class="btn" type="submit" value="Add expense">
+    </form>
+    
+    <div class="ulcontainer">
+        <ul id="users"> </ul>
+    </div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
